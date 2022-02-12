@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  # deviseの設定。(これでエラーになる)
+  # app/controllers/home_controllerが呼び出され、
+  # そこでhome/indexが呼び出される
   root to: "home#index"
 end

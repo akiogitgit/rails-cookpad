@@ -14,7 +14,7 @@ module.exports = {
       },
       colors: {
         accent: "#FFB600" // カスタムできる
-      }
+      },
     },
   },
   plugins: [
