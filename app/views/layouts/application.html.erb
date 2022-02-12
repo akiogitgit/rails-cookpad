@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SecondRails</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%# font-awesome!!! %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI=" crossorigin="anonymous" />
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+<%# これが Layoutで、この中に他のが入る %>
+  <body>
+    <%# <main class="container mx-auto mt-28 px-5 flex"> %>
+    <main>
+    <% if flash[:notice] %>
+      <p class="notice"><%= notice %></p>
+    <% end %>
+    <% if flash[:alert] %>
+      <p class="alert"><%= alert %></p>
+    <% end %>
+      <%= yield %>
+      <%# <h1 class="text-red-500 text-9xl">apple</h1> %>
+    </main>
+  </body>
+</html>
